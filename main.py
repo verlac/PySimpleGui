@@ -28,4 +28,8 @@ while True:
     if evento == sg.WIN_CLOSED or evento == 'Cancelar':
         break
 
+    # quando o botão 'Pegar Cotação' for pressionado, vai alterar o texto da última linha da janela
+    if evento == 'Pegar Cotação':
+        print('Botão pressionado')
+
 janela.close()
