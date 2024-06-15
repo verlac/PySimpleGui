@@ -24,8 +24,8 @@ while True:
     evento, valores = janela.read()
 
     # sg.WIN_CLOSED se refere ao 'X' de fechar janela, que aparece canto superior direito da janela (no Windows)
-    # SE o 'evento' for igual ao click do mouse no botão fechar, o programa vai ser interrompido
-    if evento == sg.WIN_CLOSED:
+    # SE o 'evento' for igual ao click do mouse no 'botão fechar' ou no botão 'Cancelar', o programa vai ser interrompido
+    if evento == sg.WIN_CLOSED or evento == 'Cancelar':
         break
 
 janela.close()
