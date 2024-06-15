@@ -8,11 +8,11 @@ layout_janela_principal = [
     # primeira linha da janela
     [sg.Text('Pegar Cotação da Moeda')],
     # segunda linha da janela, que vai mostrar o campo pro usuário digitar uma moeda
-    [sg.InputText()],
+    [sg.InputText(key='nome_cotacao')],
     # terceira linha, onde vão aparecer dois botões
     [sg.Button('Pegar Cotação'), sg.Button('Cancelar')],
     # quarta linha, onde vai exibir o valor da cotação para a moeda informada pelo usuário
-    [sg.Text(f'A cotação do valor {valor} é {cotacao}.')],
+    [sg.Text('', key='texto_cotacao')],
 ]
 
 # Código que vai exibir a janela com o layout definido acima
@@ -30,6 +30,7 @@ while True:
 
     # quando o botão 'Pegar Cotação' for pressionado, vai alterar o texto da última linha da janela
     if evento == 'Pegar Cotação':
-        print('Botão pressionado')
+        codigo_cotacao = valores['nome_cotacao']
+        print(f'Pegando cotação {codigo_cotacao}')
 
 janela.close()
